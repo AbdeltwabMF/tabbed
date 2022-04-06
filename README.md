@@ -7,6 +7,7 @@
 
 - [alpha](https://tools.suckless.org/tabbed/patches/alpha/): Allows to handle windows with transparency.
 - [autohide](https://tools.suckless.org/tabbed/patches/autohide/): Allows to hide tabs when there is only one tab.
+- [bar-height](https://tools.suckless.org/tabbed/patches/bar-height/): Allows to set the height of the tab bar.
 
 ## Requirements
 
