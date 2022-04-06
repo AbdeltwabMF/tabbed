@@ -7,23 +7,13 @@ SRC = tabbed.c xembed.c
 OBJ = ${SRC:.c=.o}
 BIN = ${OBJ:.o=}
 
-all: options ${BIN}
-
-options:
-	@echo tabbed build options:
-	@echo "CFLAGS   = ${CFLAGS}"
-	@echo "LDFLAGS  = ${LDFLAGS}"
-	@echo "CC       = ${CC}"
+all: ${BIN}
 
 .c.o:
 	@echo CC $<
 	@${CC} -c ${CFLAGS} $<
 
 ${OBJ}: config.h config.mk
-
-config.h:
-	@echo creating $@ from config.def.h
-	@cp config.def.h $@
 
 .o:
 	@echo CC -o $@
@@ -36,7 +26,7 @@ clean:
 dist: clean
 	@echo creating dist tarball
 	@mkdir -p tabbed-${VERSION}
-	@cp -R LICENSE Makefile README config.def.h config.mk \
+	@cp -R LICENSE Makefile README.md config.h config.mk \
 		tabbed.1 arg.h ${SRC} tabbed-${VERSION}
 	@tar -cf tabbed-${VERSION}.tar tabbed-${VERSION}
 	@gzip tabbed-${VERSION}.tar
@@ -62,4 +52,4 @@ uninstall:
 	@rm -f "${DESTDIR}${MANPREFIX}/man1/tabbed.1"
 	@rm -f "${DESTDIR}${MANPREFIX}/man1/xembed.1"
 
-.PHONY: all options clean dist install uninstall
+.PHONY: all clean dist install uninstall
