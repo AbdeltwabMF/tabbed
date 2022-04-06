@@ -6,6 +6,7 @@
 ## Features & Patches
 
 - [alpha](https://tools.suckless.org/tabbed/patches/alpha/): Allows to handle windows with transparency.
+- [autohide](https://tools.suckless.org/tabbed/patches/autohide/): Allows to hide tabs when there is only one tab.
 
 ## Requirements
 
