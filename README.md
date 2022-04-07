@@ -9,6 +9,7 @@
 - [autohide](https://tools.suckless.org/tabbed/patches/autohide/): Allows to hide tabs when there is only one tab.
 - [bar-height](https://tools.suckless.org/tabbed/patches/bar-height/): Allows to set the height of the tab bar.
 - [hidetabs](https://tools.suckless.org/tabbed/patches/hidetabs/): Allows to hide tabs.
+- [xresources](https://tools.suckless.org/tabbed/patches/xresources/): Allows to set the colors from X resources.
 
 ## Requirements
 

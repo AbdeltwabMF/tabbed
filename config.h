@@ -4,12 +4,12 @@
 static const char font[] =
     "Fantasque Sans Mono:pixelsize=13:antialias=true:autohint=true";
 
-static const char *normbgcolor = "#2B2B2B";
-static const char *normfgcolor = "#F0F0F0";
-static const char *selbgcolor = "#208C9F";
-static const char *selfgcolor = "#E6EDF9";
-static const char *urgbgcolor = "#FFEDE1";
-static const char *urgfgcolor = "#C34890";
+static char *normbgcolor = "#2B2B2B";
+static char *normfgcolor = "#F0F0F0";
+static char *selbgcolor = "#208C9F";
+static char *selfgcolor = "#E6EDF9";
+static char *urgbgcolor = "#FFEDE1";
+static char *urgfgcolor = "#C34890";
 
 static const char before[] = "<";
 static const char after[] = ">";
@@ -26,6 +26,19 @@ static const int barHeight	= 24;
  */
 static int newposition = 0;
 static Bool npisrelative = False;
+
+/*
+ * Xresources preferences to load at startup
+ */
+ResourcePref resources[] = {
+		{ "color0",       STRING,  &normbgcolor },
+		{ "color7",       STRING,  &normfgcolor },
+		{ "color6",       STRING,  &selbgcolor },
+		{ "color7",       STRING,  &selfgcolor },
+		{ "color5",       STRING,  &urgbgcolor },
+		{ "color7",       STRING,  &urgfgcolor },
+};
+
 
 #define SETPROP(p)                                                             \
   {                                                                            \
