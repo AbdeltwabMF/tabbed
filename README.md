@@ -2,6 +2,8 @@
 
 `tabbed` is a simple tabbed X window container.
 
+## Preview
+![demo](preview.png)
 
 ## Features & Patches
 
